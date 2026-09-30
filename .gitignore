@@ -1,0 +1,43 @@
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JavaScript / TypeScript
+node_modules/
+.next/
+.expo/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Tests and tooling
+.turbo/
+.cache/
+playwright-report/
+test-results/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local data and logs
+*.log
+*.sqlite
+*.sqlite3
+data/
+tmp/
+
+# Infrastructure
+.terraform/
+*.tfstate
+*.tfstate.*
+.aws-sam/
+
