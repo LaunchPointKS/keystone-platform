@@ -1,0 +1,6 @@
+{
+  "name": "@keystone/api-client",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reserved generated OpenAPI client package"
+}

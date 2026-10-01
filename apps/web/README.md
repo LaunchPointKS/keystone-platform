@@ -4,3 +4,4 @@ Future Next.js client for office and administrative workflows. It calls the Nest
 
 Likely first surfaces: organization setup, membership and invitation management, projects, tasks, project teams, files, and activity.
 
+Phase 1A provides a small connection screen that verifies the browser can reach `GET /v1/health`. Start it with `pnpm --filter @keystone/web dev` after starting the API.

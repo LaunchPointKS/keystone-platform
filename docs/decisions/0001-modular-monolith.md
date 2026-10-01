@@ -13,4 +13,3 @@ Build one TypeScript NestJS codebase with clear platform and product modules. Ru
 ## Consequences
 
 Transactions and local development stay simple. Modules must enforce ownership and dependency rules so later extraction remains possible. Service extraction requires evidence from scaling, release cadence, ownership, or failure isolation.
-

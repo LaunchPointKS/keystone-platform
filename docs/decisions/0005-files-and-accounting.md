@@ -13,4 +13,3 @@ Store file bytes in private S3 using authorized presigned transfers. Put account
 ## Consequences
 
 The API owns file metadata, authorization, confirmation, and audit events while S3 carries bytes. Accounting failures are retried and shown to administrators without rolling back project operations. Live ERP work waits until Phase 3.
-

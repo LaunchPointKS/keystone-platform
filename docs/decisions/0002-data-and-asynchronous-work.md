@@ -13,4 +13,3 @@ Use PostgreSQL 16 as the system of record, Prisma as the single ORM, raw SQL onl
 ## Consequences
 
 Schema ownership and migration review become important. Jobs and consumers must be idempotent. Redis is not a source of record. Kafka and multiple ORMs remain outside the initial architecture.
-

@@ -6,18 +6,18 @@ This is the target end-to-end user experience for moving work from an opportunit
 
 ## Lifecycle stages
 
-| Stage | Outcome | Capabilities shown in the approved flow |
-| --- | --- | --- |
-| 1. Prospecting / Sales | Find and win work | Accounts, opportunities, sales map, activity and tasks |
-| 2. Engineering / Design | Design the solution | Site survey, system design, drawings and plans, BIM |
-| 3. Estimates | Turn the design into a proposal | Bid and estimate, labor and materials, alternates, approve and send |
-| 4. Customer Portal | Get the proposal approved | Proposal review, document signing, selections and customization, status tracking |
-| 5. Procurement | Order what the project needs | Purchase-order creation, vendor orders, audit trails, receiving into inventory |
-| 6. Inventory | Track and prepare materials | Stock tracking, kits and staging, project adjustments, serial and warranty tracking |
-| 7. Scheduling | Put the work on the calendar | Resource planning, technician assignments, calendar views, field notifications |
-| 8. Project Management | Execute the work | Tasks and checklists, time tracking, photos and documentation, client updates |
-| 9. Closeout Documents | Complete a strong handover | As-builts, operation and maintenance manuals, warranties, client handover |
-| 10. Billing | Invoice, collect, and compensate | Progress billing, final invoice, payment tracking, commission |
+| Stage                   | Outcome                          | Capabilities shown in the approved flow                                             |
+| ----------------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
+| 1. Prospecting / Sales  | Find and win work                | Accounts, opportunities, sales map, activity and tasks                              |
+| 2. Engineering / Design | Design the solution              | Site survey, system design, drawings and plans, BIM                                 |
+| 3. Estimates            | Turn the design into a proposal  | Bid and estimate, labor and materials, alternates, approve and send                 |
+| 4. Customer Portal      | Get the proposal approved        | Proposal review, document signing, selections and customization, status tracking    |
+| 5. Procurement          | Order what the project needs     | Purchase-order creation, vendor orders, audit trails, receiving into inventory      |
+| 6. Inventory            | Track and prepare materials      | Stock tracking, kits and staging, project adjustments, serial and warranty tracking |
+| 7. Scheduling           | Put the work on the calendar     | Resource planning, technician assignments, calendar views, field notifications      |
+| 8. Project Management   | Execute the work                 | Tasks and checklists, time tracking, photos and documentation, client updates       |
+| 9. Closeout Documents   | Complete a strong handover       | As-builts, operation and maintenance manuals, warranties, client handover           |
+| 10. Billing             | Invoice, collect, and compensate | Progress billing, final invoice, payment tracking, commission                       |
 
 ## Capabilities spanning every stage
 
@@ -49,4 +49,3 @@ The numbered stages are the user’s workflow, not a requirement for ten matchin
 ## Product planning rule
 
 Stories and acceptance criteria should identify both the lifecycle stage and the owning domain. This keeps the user journey coherent without coupling the architecture to the visual layout.
-

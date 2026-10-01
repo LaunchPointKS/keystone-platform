@@ -20,13 +20,12 @@ Effective access combines an organization role with any active project role. Fea
 
 The first role pack is:
 
-| Role | Intent |
-| --- | --- |
+| Role                      | Intent                                                    |
+| ------------------------- | --------------------------------------------------------- |
 | `org_owner` / `org_admin` | Organization, billing settings, and member administration |
-| `pm` | Project creation, management, and invitations |
-| `field` | Assigned-project tasks, photos, and activity |
-| `subcontractor` | Restricted project collaboration |
-| `viewer` | Read-only access |
+| `pm`                      | Project creation, management, and invitations             |
+| `field`                   | Assigned-project tasks, photos, and activity              |
+| `subcontractor`           | Restricted project collaboration                          |
+| `viewer`                  | Read-only access                                          |
 
 The detailed permission matrix remains a required pre-implementation decision.
-

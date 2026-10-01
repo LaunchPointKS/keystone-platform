@@ -13,4 +13,3 @@ Use Clerk initially behind an auth interface. Map its subject to application-own
 ## Consequences
 
 Product modules avoid Clerk types and can survive a provider change. Every service must scope data by tenant and resource, even after guards run. Permission checks use permission strings rather than role-name conditionals.
-

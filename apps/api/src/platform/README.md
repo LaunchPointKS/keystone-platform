@@ -12,4 +12,3 @@ Planned shared capabilities:
 - Observability, request context, and structured errors
 
 Platform core must not import a product module.
-

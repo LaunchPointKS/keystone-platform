@@ -20,4 +20,3 @@ Activity is an append-only projection of domain events. Entries include organiza
 ## Transactional outbox
 
 Business mutations and their outbox messages commit together. A worker claims and publishes messages idempotently. Each consumer records enough state to tolerate redelivery. External downtime must not roll back core project work.
-

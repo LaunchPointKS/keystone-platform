@@ -12,12 +12,11 @@ Mobile uses a server-authoritative model with optimistic local writes.
 
 ## Initial conflict policies
 
-| Data | Phase 1 policy |
-| --- | --- |
-| Task status and notes | Last write wins by server version; losing client receives the current record and a conflict notice |
-| Photos and file attachments | Append-only when authorization remains valid |
-| Inventory quantities | Explicit server decision or merge when inventory ships; never generic last write wins |
-| Safety sign-offs | Explicit server decision when safety ships; never generic last write wins |
+| Data                        | Phase 1 policy                                                                                     |
+| --------------------------- | -------------------------------------------------------------------------------------------------- |
+| Task status and notes       | Last write wins by server version; losing client receives the current record and a conflict notice |
+| Photos and file attachments | Append-only when authorization remains valid                                                       |
+| Inventory quantities        | Explicit server decision or merge when inventory ships; never generic last write wins              |
+| Safety sign-offs            | Explicit server decision when safety ships; never generic last write wins                          |
 
 The client clearly exposes offline, pending, failed, conflicted, and synchronized states. A full CRDT model is outside the current scope.
-

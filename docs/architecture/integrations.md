@@ -9,4 +9,3 @@ Phase 1 reserves the interface, a fake implementation, connection concepts, and 
 Mappings will identify the organization, external system, local type and ID, external ID, last synchronization time, and content hash. Retries, dead-letter handling, and administrator-visible failures belong to the worker pipeline.
 
 The future AI gateway follows the same rule: model tools call authorized application services using the requesting `Principal`; the model never queries persistence or bypasses authorization directly.
-
