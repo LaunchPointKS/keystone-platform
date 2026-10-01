@@ -15,14 +15,14 @@
     "@keystone/contracts": "workspace:*",
     "expo": "~57.0.26",
     "expo-status-bar": "~57.0.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "react-native": "0.86.3"
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.87.1"
   },
   "devDependencies": {
-    "@types/react": "19.2.18",
-    "eslint": "9.39.5",
+    "@types/react": "19.3.0",
+    "eslint": "10.11.0",
     "eslint-config-expo": "57.0.2",
-    "typescript": "6.0.3"
+    "typescript": "7.0.2"
   }
 }
