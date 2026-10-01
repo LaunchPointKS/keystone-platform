@@ -1,6 +1,6 @@
-# Product roadmap
+# Delivery roadmap
 
-Dates remain open. The order reflects technical and product dependencies.
+Dates remain open. The order reflects technical and product dependencies. This roadmap controls implementation order; the [construction project lifecycle](project-lifecycle.md) controls the intended end-to-end user journey. A later lifecycle stage may be built before every capability in an earlier stage when dependencies and the first usable field loop require it.
 
 ## Phase 1 — Foundation and core field loop
 
@@ -22,21 +22,25 @@ Goal: run a project with tasks, photos, activity, real permissions, and offline 
 ## Phase 2 — Field operations depth
 
 - Scheduling and crew assignments
-- Richer task workflows, daily logs, and checklists
+- Richer project-management workflows, time tracking, daily logs, and checklists
 - Broader offline coverage and stronger conflict UX
 - First safety checklists and incident workflows
 - Notification preferences and more event types
+- Initial closeout document collection where it naturally follows field work
 
 ## Phase 3 — Commercial and ERP
 
 - Versioned estimates and proposals
-- Inventory, locations, purchasing, and receipts
+- Customer proposal review, approval, and document signing
+- Procurement, inventory, locations, kits, serials, and receipts
+- Progress billing, final invoices, payment state, and commission rules
 - Production QuickBooks and NetSuite implementations
 - Invoice and payment synchronization with administrator mapping UI
 
 ## Phase 4 — Growth and intelligence
 
-- Map-based CRM
+- Prospecting, accounts, opportunities, sales activity, and map-based CRM
+- Expanded engineering and design workflows after their source formats and collaboration needs are validated
 - Business reporting and analytics read models
 - RBAC-scoped AI assistant
 - Search upgrades and targeted worker/service extraction where measurements justify it

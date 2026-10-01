@@ -43,7 +43,7 @@ docs/
 6. Web and mobile use the Nest API as the system boundary. Next.js route handlers are not a second business backend.
 7. Cross-cutting side effects use a transactional outbox and workers rather than slowing or weakening core writes.
 
-Start with the [system overview](docs/architecture/system-overview.md), [domain boundaries](docs/architecture/domain-boundaries.md), and [roadmap](docs/product/roadmap.md).
+Start with the [project lifecycle](docs/product/project-lifecycle.md), [system overview](docs/architecture/system-overview.md), [domain boundaries](docs/architecture/domain-boundaries.md), and [delivery roadmap](docs/product/roadmap.md).
 
 ## Before implementation begins
 

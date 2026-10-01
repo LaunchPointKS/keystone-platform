@@ -16,16 +16,23 @@
 
 | Context | Phase | Owns |
 | --- | --- | --- |
-| Projects and tasks | 1 | Projects, phases, tasks, assignees, status |
+| Projects and field execution | 1 | Projects, phases, tasks, checklists, assignees, status, time entries, client updates |
 | Teams | 1 | Crews, organization units, project team membership |
-| Scheduling | 2 | Calendars, job schedules, resource assignment |
+| Sales / CRM | 4 | Accounts, opportunities, sales activity, geographic pipeline views |
+| Engineering and design | Later planning | Site surveys, system designs, drawing sets, plan and BIM references |
+| Estimates | 3 | Bids, versions, labor and material line items, alternates, project conversion |
+| Customer portal | Cross-domain experience | Proposal review, signatures, selections, status, and approved shared project data |
+| Procurement | 3 | Vendors, purchase orders, vendor orders, receiving, audit history |
+| Inventory | 3 | Items, stock, locations, kits, staging, allocations, serials, warranties |
+| Scheduling | 2 | Calendars, resource plans, technician assignments, field notifications |
 | Safety and compliance | 2+ | Checklists, incidents, certifications, supporting files |
-| Estimates | 3 | Bids, versions, line items, project conversion |
-| Inventory and purchasing | 3 | Items, stock, locations, purchase orders, receipts |
-| Billing integrations | 1 stub / 3 live | Connection config, mappings, synchronization jobs |
-| Map CRM | 4 | Accounts, contacts, locations, pipeline |
+| Closeout | Later planning | As-builts, O&M manuals, warranty packages, handover state |
+| Billing | 3 | Progress billing, final invoices, payment state, commission calculations |
+| Accounting integrations | 1 stub / 3 live | Connection config, external mappings, synchronization jobs |
 | Analytics | 4 | Metric definitions, read models, exports |
 | AI assistant | 4 | Conversations, tool allowlists, audit trail |
+
+The [project lifecycle](../product/project-lifecycle.md) is the approved user-flow map. Lifecycle stages and backend modules are intentionally not one-to-one: client experiences coordinate domain services while ownership of rules and data remains explicit.
 
 ## Collaboration boundary
 
