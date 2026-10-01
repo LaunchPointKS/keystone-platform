@@ -48,4 +48,3 @@ Goal: run a project with tasks, photos, activity, real permissions, and offline 
 ## Triggered work
 
 CDN rollout, multiple regions, data residency, formal SOC 2 or ISO programs, and service extraction happen when performance, customer commitments, regulation, team ownership, or operational risk creates a concrete requirement.
-

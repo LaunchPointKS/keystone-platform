@@ -1,0 +1,20 @@
+{
+  "name": "@keystone/database",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "prisma generate",
+    "generate": "prisma generate",
+    "lint": "eslint prisma.config.ts --max-warnings=0",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "validate": "prisma validate"
+  },
+  "dependencies": {
+    "@prisma/client": "7.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "prisma": "7.10.0",
+    "typescript": "6.0.3"
+  }
+}

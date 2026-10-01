@@ -1,0 +1,9 @@
+node_modules
+.next
+.expo
+dist
+build
+coverage
+packages/database/generated
+pnpm-lock.yaml
+docs/assets

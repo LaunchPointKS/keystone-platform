@@ -15,4 +15,3 @@ List the checks performed or explain why validation is not applicable.
 - [ ] No boundary or dependency-direction change
 - [ ] Documentation updated
 - [ ] ADR added or superseded
-

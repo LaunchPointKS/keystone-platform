@@ -1,0 +1,40 @@
+{
+  "name": "keystone-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Construction management platform monorepo",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=24.19.0 <25",
+    "pnpm": ">=11.19.0 <12"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "check": "pnpm format:check && turbo run lint typecheck test build",
+    "dev": "turbo run dev --parallel",
+    "dev:api": "pnpm --filter @keystone/api dev",
+    "dev:mobile": "pnpm --filter @keystone/mobile dev",
+    "dev:web": "pnpm --filter @keystone/web dev",
+    "dev:worker": "pnpm --filter @keystone/api dev:worker",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "infra:down": "docker compose down",
+    "infra:up": "docker compose up -d",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "pnpm --filter @keystone/database generate",
+    "db:validate": "pnpm --filter @keystone/database validate"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "24.19.0",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.9",
+    "turbo": "2.11.6",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.0"
+  }
+}

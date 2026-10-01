@@ -1,0 +1,11 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Domain models begin in Phase 1B. Tenant-owned models will include org_id,
+// and syncable aggregates will include version, updated_at, and deleted_at.

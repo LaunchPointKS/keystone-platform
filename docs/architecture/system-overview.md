@@ -43,4 +43,3 @@ Product modules may depend on platform capabilities. Platform core cannot depend
 ## Deployment shape
 
 Phase 1 uses one codebase with separately runnable API and worker processes. It begins in one AWS region. A module becomes a separate service only after independent scale, release cadence, ownership, or failure isolation provides a concrete benefit.
-

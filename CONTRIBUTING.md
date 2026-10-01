@@ -14,4 +14,3 @@ Keystone is still in architecture planning. Until implementation starts, changes
 ## Architecture decisions
 
 Use the template in [`docs/decisions/README.md`](docs/decisions/README.md). Decisions are immutable history: supersede an accepted decision with a new record instead of rewriting the old rationale.
-

@@ -13,4 +13,3 @@ Expo mobile will keep a SQLite projection, queue commands with client UUIDs, pul
 ## Consequences
 
 Syncable tables need version and soft-delete fields from their first migration. Each domain defines conflict behavior. The UI must expose sync state. Full peer-to-peer or CRDT synchronization remains out of scope.
-
