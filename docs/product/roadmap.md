@@ -1,6 +1,6 @@
 # Delivery roadmap
 
-Dates remain open. The order reflects technical and product dependencies. This roadmap controls implementation order; the [construction project lifecycle](project-lifecycle.md) controls the intended end-to-end user journey. A later lifecycle stage may be built before every capability in an earlier stage when dependencies and the first usable field loop require it.
+Dates remain open. The order reflects technical and product dependencies. This roadmap controls implementation order; the [construction project lifecycle](project-lifecycle.md) controls the intended end-to-end user journey, and the [rebuild guardrails](rebuild-guardrails.md) constrain every phase. A later lifecycle stage may be built before every capability in an earlier stage when dependencies and the first usable field loop require it.
 
 ## Phase 1 — Foundation and core field loop
 

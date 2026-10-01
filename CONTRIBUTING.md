@@ -6,6 +6,7 @@ Keystone is still in architecture planning. Until implementation starts, changes
 
 - Create a focused branch for each change.
 - Keep pull requests small enough to review as one coherent decision.
+- Check product and architecture changes against the rebuild guardrails in `docs/product/rebuild-guardrails.md`.
 - Update architecture documentation when a change alters a boundary or data flow.
 - Add or supersede an architecture decision record when changing a locked decision.
 - Never commit credentials, local environment files, customer data, or production exports.

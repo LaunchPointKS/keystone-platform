@@ -1,6 +1,6 @@
 # Construction project lifecycle
 
-This is the target end-to-end user experience for moving work from an opportunity through project execution, closeout, billing, and payment. It defines the product’s workflow and capability map. It is not the sequence in which the software must be implemented; see the [delivery roadmap](roadmap.md) for build phases.
+This is the target end-to-end user experience for moving work from an opportunity through project execution, closeout, billing, and payment. It defines the product’s workflow and capability map and is interpreted through the [rebuild guardrails](rebuild-guardrails.md). It is not the sequence in which the software must be implemented; see the [delivery roadmap](roadmap.md) for build phases.
 
 ![Construction App project lifecycle](../assets/construction-app-project-lifecycle.png)
 
