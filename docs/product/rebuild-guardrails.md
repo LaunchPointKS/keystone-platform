@@ -8,7 +8,7 @@ Change a locked architectural rule through an architecture decision record (ADR)
 
 Keystone is a configurable, multi-tenant operations platform for contractors and subcontractors. It connects office, administrative, and field work around a project from opportunity through billing. The web application serves office and administrative workflows; the native mobile application supports field work, including unreliable or absent connectivity.
 
-The project is the operational center of the system, but it does not erase the distinction between organizations, customers, physical locations, people, opportunities, and contracts. Those records can exist before a project and can relate to more than one project over time.
+The bid is the commercial center before a win, and the project is the operational center after a win. Neither erases the distinction between organizations, prospects or clients, physical sites, people, commercial versions, and contracts. Those records can exist before a project and can relate to more than one project over time.
 
 Security and low-voltage integration workflows are the strongest current reference case. Whether the first market is specifically security integrators or a broader group of specialty contractors remains a product decision. Domain names and configuration should stay contractor-oriented until that choice is made.
 
@@ -18,15 +18,17 @@ When sources disagree, use this order:
 
 1. Accepted ADRs define locked technical decisions.
 2. The [construction project lifecycle](project-lifecycle.md) defines the intended end-to-end experience.
-3. The [delivery roadmap](roadmap.md) defines implementation order.
-4. Current architecture documents define system and domain boundaries.
-5. Historical application material supplies examples, lessons, and requirements to validate.
+3. The [commercial domain model](domain-model.md) defines the current provisional identity and conversion model.
+4. The [delivery roadmap](roadmap.md) defines implementation order.
+5. Current architecture documents define system and domain boundaries.
+6. Historical application material supplies examples, lessons, and requirements to validate.
 
 ## Concepts to preserve
 
 | Concept                                      | Why it matters                                                                                            | Early design implication                                                                          |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Project as the operating center              | Most work, communication, files, assignments, and progress converge on a project.                         | Project membership and external project references are first-class data.                          |
+| Bid before project                           | Potential work needs commercial history without polluting operational job lists.                          | Prospects, bids, estimate versions, and design versions stay distinct from projects.              |
+| Project as the operating center after a win  | Delivery work, communication, files, assignments, and progress converge on a project.                     | Acceptance creates the project and an immutable as-sold baseline; lost bids create no project.    |
 | Customer, location, and project are distinct | One customer may operate many locations, and a location may have many projects.                           | Do not collapse these records into a single account or job table.                                 |
 | Visibility and mutation are separate         | A person may need awareness of work they cannot change.                                                   | Permissions distinguish viewing, assigning, approving, and editing.                               |
 | Structured field execution                   | Repeatable phases, systems, checklists, evidence, flags, and completion history make field work reliable. | Tasks support templates, assignments, files, state history, and later phase grouping.             |
@@ -79,6 +81,7 @@ The following patterns must not enter the codebase:
 - forcing an ambiguous import or entity match;
 - allowing lower-confidence data to overwrite verified or manually maintained values silently;
 - using external display strings as internal primary keys;
+- representing prospects or bids as organizations, or using a `bidding` project status for pre-win work;
 - hard-deleting activity, approvals, completed work, or other audit-worthy records;
 - changing the database without a migration;
 - committing credentials, customer exports, runtime uploads, or environment files;
@@ -117,7 +120,7 @@ Phase 1 establishes the secure project and field-work loop. Phase 1A supplies th
 - the external-reference and source-attribution shape; and
 - baseline activity retention and audit expectations.
 
-The first product slice should prove that an authorized organization member can enter, view, and update a project-scoped unit of work through the API, with its change history visible and its mobile synchronization behavior defined. Later Phase 1 slices can add files, collaboration, real-time updates, notifications, and accounting boundaries without weakening that path.
+The first product slice should prove that an authorized organization member can enter, view, and update a project-scoped unit of work through the API, with its change history visible and its mobile synchronization behavior defined. Phase 1 may create a project directly and must identify that source explicitly; it does not create placeholder bids or prospects. Later Phase 1 slices can add files, collaboration, real-time updates, notifications, and accounting boundaries without weakening that path.
 
 ## Change review filter
 

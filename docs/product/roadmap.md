@@ -30,7 +30,10 @@ Goal: run a project with tasks, photos, activity, real permissions, and offline 
 
 ## Phase 3 — Commercial and ERP
 
-- Versioned estimates and proposals
+- Prospect/client relationships and physical sites
+- Bids and their commercial lifecycle
+- Versioned estimates, proposal designs, and issued artifacts
+- Accepted-bid conversion into a client, project, and immutable as-sold baseline
 - Customer proposal review, approval, and document signing
 - Procurement, inventory, locations, kits, serials, and receipts
 - Progress billing, final invoices, payment state, and commission rules
@@ -39,7 +42,7 @@ Goal: run a project with tasks, photos, activity, real permissions, and offline 
 
 ## Phase 4 — Growth and intelligence
 
-- Prospecting, accounts, opportunities, sales activity, and map-based CRM
+- Advanced prospecting, sales activity, geographic pipeline views, and map-based CRM
 - Expanded engineering and design workflows after their source formats and collaboration needs are validated
 - Business reporting and analytics read models
 - RBAC-scoped AI assistant

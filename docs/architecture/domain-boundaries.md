@@ -14,25 +14,33 @@
 
 ## Product modules
 
-| Context                      | Phase                   | Owns                                                                                 |
-| ---------------------------- | ----------------------- | ------------------------------------------------------------------------------------ |
-| Projects and field execution | 1                       | Projects, phases, tasks, checklists, assignees, status, time entries, client updates |
-| Teams                        | 1                       | Crews, organization units, project team membership                                   |
-| Sales / CRM                  | 4                       | Accounts, opportunities, sales activity, geographic pipeline views                   |
-| Engineering and design       | Later planning          | Site surveys, system designs, drawing sets, plan and BIM references                  |
-| Estimates                    | 3                       | Bids, versions, labor and material line items, alternates, project conversion        |
-| Customer portal              | Cross-domain experience | Proposal review, signatures, selections, status, and approved shared project data    |
-| Procurement                  | 3                       | Vendors, purchase orders, vendor orders, receiving, audit history                    |
-| Inventory                    | 3                       | Items, stock, locations, kits, staging, allocations, serials, warranties             |
-| Scheduling                   | 2                       | Calendars, resource plans, technician assignments, field notifications               |
-| Safety and compliance        | 2+                      | Checklists, incidents, certifications, supporting files                              |
-| Closeout                     | Later planning          | As-builts, O&M manuals, warranty packages, handover state                            |
-| Billing                      | 3                       | Progress billing, final invoices, payment state, commission calculations             |
-| Accounting integrations      | 1 stub / 3 live         | Connection config, external mappings, synchronization jobs                           |
-| Analytics                    | 4                       | Metric definitions, read models, exports                                             |
-| AI assistant                 | 4                       | Conversations, tool allowlists, audit trail                                          |
+| Context                      | Phase                   | Owns                                                                                         |
+| ---------------------------- | ----------------------- | -------------------------------------------------------------------------------------------- |
+| Projects and field execution | 1                       | Projects, phases, tasks, checklists, assignees, status, time entries, client updates         |
+| Teams                        | 1                       | Crews, organization units, project team membership                                           |
+| Relationships and sites      | 3                       | Prospect-to-client lifecycle, customer relationships, physical sites                         |
+| Bids                         | 3                       | Commercial pursuits, status history, acceptance state and orchestration                      |
+| Estimates                    | 3                       | Bid-scoped estimate versions, labor and material line items, alternates, issued revisions    |
+| Engineering and design       | 3 foundation / later    | Bid-scoped design versions, accepted design baseline, later project design and BIM workflows |
+| Customer portal              | Cross-domain experience | Proposal review, signatures, selections, status, and approved shared project data            |
+| Procurement                  | 3                       | Vendors, purchase orders, vendor orders, receiving, audit history                            |
+| Inventory                    | 3                       | Items, stock, locations, kits, staging, allocations, serials, warranties                     |
+| Scheduling                   | 2                       | Calendars, resource plans, technician assignments, field notifications                       |
+| Safety and compliance        | 2+                      | Checklists, incidents, certifications, supporting files                                      |
+| Closeout                     | Later planning          | As-builts, O&M manuals, warranty packages, handover state                                    |
+| Billing                      | 3                       | Progress billing, final invoices, payment state, commission calculations                     |
+| Accounting integrations      | 1 stub / 3 live         | Connection config, external mappings, synchronization jobs                                   |
+| CRM growth experiences       | 4                       | Advanced prospecting, sales activity, geographic pipeline views, map-based CRM               |
+| Analytics                    | 4                       | Metric definitions, read models, exports                                                     |
+| AI assistant                 | 4                       | Conversations, tool allowlists, audit trail                                                  |
 
 The [project lifecycle](../product/project-lifecycle.md) is the approved user-flow map. Lifecycle stages and backend modules are intentionally not one-to-one: client experiences coordinate domain services while ownership of rules and data remains explicit.
+
+## Commercial conversion boundary
+
+Before a win, the bid owns the commercial pursuit while estimate and design modules own their independently versioned artifacts. `AcceptBid` is a synchronous application workflow that uses public module services to validate the chosen versions, promote the prospect relationship to client, create the project, and persist an immutable as-sold baseline in one transaction. It emits `BidAccepted` through the transactional outbox after the business state is durable.
+
+The accepted bid is a conversion record or state, not another tenant or operational project. The source bid and selected versions remain available for audit. Project-owned revisions after acceptance do not rewrite the pre-win originals. See the [preliminary commercial domain model](../product/domain-model.md) and [backend dependency map](dependency-map.md).
 
 ## Collaboration boundary
 

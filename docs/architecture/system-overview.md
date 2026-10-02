@@ -40,6 +40,8 @@ infrastructure implementation (Prisma, Clerk, S3, Expo Push)
 
 Product modules may depend on platform capabilities. Platform core cannot depend on product modules. Cross-module behavior uses a public application service for synchronous work or a domain event for fan-out.
 
+The [backend dependency map](dependency-map.md) applies this rule to the pre-win commercial chain, accepted-bid conversion, and operational project modules.
+
 ## Deployment shape
 
 Phase 1 uses one codebase with separately runnable API and worker processes. It begins in one AWS region. A module becomes a separate service only after independent scale, release cadence, ownership, or failure isolation provides a concrete benefit.

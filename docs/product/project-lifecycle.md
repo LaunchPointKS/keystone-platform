@@ -19,6 +19,18 @@ This is the target end-to-end user experience for moving work from an opportunit
 | 9. Closeout Documents   | Complete a strong handover       | As-builts, operation and maintenance manuals, warranties, client handover           |
 | 10. Billing             | Invoice, collect, and compensate | Progress billing, final invoice, payment tracking, commission                       |
 
+## Commercial conversion path
+
+The first four experience stages produce one explicit domain transition:
+
+```text
+Prospect → Bid → versioned Estimates + versioned Designs → Accepted bid → Client + Project
+```
+
+A prospect is a potential client, and a bid is a potential job. Estimate and design revisions remain attached to the bid until acceptance. The `AcceptBid` transaction pins the approved versions, promotes the prospect relationship to client, and creates the operational project with an immutable as-sold baseline. Lost or abandoned bids never appear as projects.
+
+See the [preliminary commercial domain model](domain-model.md) for identities, versioning, and open questions. This domain flow does not change the delivery order: Phase 1 may create projects directly while the pre-win commercial modules remain deferred.
+
 ## Capabilities spanning every stage
 
 ### People and collaboration
@@ -42,6 +54,7 @@ The product should measure outcomes across the lifecycle so teams can learn, opt
 The numbered stages are the user’s workflow, not a requirement for ten matching backend modules. A stage may coordinate several domains, and a domain may support several stages. For example:
 
 - The customer portal is a client experience over estimates, documents, approvals, selections, projects, and identity.
+- Bid acceptance is a coordinated application workflow across relationships, bids, estimates, design, files, and projects; it is not a replacement for those ownership boundaries.
 - Photos and documents use the shared files capability in design, project execution, and closeout.
 - Billing owns application billing workflows; accounting integrations synchronize approved records with QuickBooks or NetSuite.
 - Activity, notifications, permissions, and reporting remain shared capabilities with explicit ownership.
